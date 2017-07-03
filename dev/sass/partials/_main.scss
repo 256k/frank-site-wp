@@ -1,0 +1,167 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  
+}
+
+// general styles
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  width: 80%;
+}
+
+// hero
+
+
+
+.hero {
+  background-image: url('../../assets/frankcontactbk-faded.png');
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
+  
+  
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.hero-profile-pic {
+  width: 200px;
+}
+.hero-profile-pic img {
+  width: 100%;
+}
+.hero-info {
+  color: #333;
+  width: 40%;
+  font-size: 1.2em;
+  h1 {
+    margin: 0;
+  }
+}
+
+.hero-social-icons {
+  font-size: 2em;
+}
+
+.hero-social-icons i {
+  margin-right: 50px;
+}
+
+// navbar
+
+.scrolled-title{
+  height: 0;
+  background: red;
+  color: #333;
+  width: 100%;
+  transition: 0.5s ease;
+  overflow: hidden;
+  background-image: url('../../assets/frankcontactbk-faded.png');
+  background: no-repeat center cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
+
+  
+}
+
+.scrolled-title h1 {
+  padding: 0;
+  margin: 5px;
+  
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #ddd;
+  position: absolute;
+  background: white;
+  z-index: 2;
+  
+}
+
+.js-fixedPos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+// gallery
+
+
+.gallery-grid {
+    display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 200px;
+}
+
+
+.gallery-grid-box {
+    height: 250px;
+  width: 25%;
+  min-width: 300px;
+  margin: 10px;
+  flex-grow: 1;
+}
+.gallery-grid-box:nth-child(3n+0){
+  width: 75%;
+}
+.gallery-grid-box:nth-child(5n+0){
+  width: 50%;
+}
+
+.image {
+  // background-image: url('http://lorempixel.com/1000/1200/abstract');
+  background: no-repeat center cover;
+  height: 100%;
+  width: 100%;
+
+}
