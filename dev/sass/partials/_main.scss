@@ -1,3 +1,6 @@
+$backgroundimg: 'assets/frankcontactbk.png';
+
+
 html,
 body {
   height: 100%;
@@ -19,7 +22,7 @@ body {
 // general styles
 
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: auto;
   height: 100%;
   width: 80%;
@@ -30,13 +33,13 @@ body {
 
 
 .hero {
-  background-image: url('../../assets/frankcontactbk-faded.png');
+  background-image: url($backgroundimg);
   background-position: top;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   height: 60vh;
-  box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
+  // box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
   
   
 }
@@ -82,12 +85,14 @@ body {
   width: 100%;
   transition: 0.5s ease;
   overflow: hidden;
-  background-image: url('../../assets/frankcontactbk-faded.png');
-  background: no-repeat center cover;
+  background-image: url($backgroundimg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
+  // box-shadow: inset 0 0 0 100000px rgba(255, 255, 255, 0.7);
 
   
 }
@@ -151,9 +156,9 @@ body {
   margin: 10px;
   flex-grow: 1;
 }
-.gallery-grid-box:nth-child(3n+0){
-  width: 75%;
-}
+// .gallery-grid-box:nth-child(3n+0){
+//   width: 75%;
+// }
 .gallery-grid-box:nth-child(5n+0){
   width: 50%;
 }

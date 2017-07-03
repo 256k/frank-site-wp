@@ -63,76 +63,7 @@
       <?php else: ?>
         <!-- no posts found -->
       <?php endif; ?>
-       
-        
-            
-            
-            
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
-            <div class="gallery-grid-box">
-              <div class="image">
-                
-              </div>
-            </div>
+
             
             
           </div>
