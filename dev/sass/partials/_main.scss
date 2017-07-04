@@ -70,10 +70,13 @@ body {
 
 .hero-social-icons {
   font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-social-icons i {
-  margin-right: 50px;
+  margin: 0 30px;
 }
 
 // navbar
@@ -121,6 +124,7 @@ body {
 }
 
 .menu {
+  color: #333;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -133,7 +137,13 @@ body {
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 300ms ease;
+    padding: 5px 0;
   }
+}
+
+.active {
+  border-bottom: 3px solid #333;
 }
 
 // gallery
@@ -181,4 +191,29 @@ body {
 
 .hide-box {
   height: 0;
+}
+
+
+@media screen and (max-width: 780px){
+  .hero {
+    padding: 20px;
+    height: auto;
+  }
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    
+  }
+  .hero-info {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .navbar {
+    height: 150px;
+  }
+  .menu {
+    flex-direction: column;
+    
+  }
 }

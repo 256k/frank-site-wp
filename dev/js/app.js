@@ -33,6 +33,9 @@ var $galleryGrid = $(".gallery-grid");
 
 $menuItemLink.on('click', function(e){
   e.preventDefault();
+  $(this).parents(".menu").find("a").removeClass("active");
+  $(this).addClass("active")
+  
   var $filterKey = $(this).text().toLowerCase();
   console.log($filterKey);
   
