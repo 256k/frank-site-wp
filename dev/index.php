@@ -33,30 +33,35 @@
       </div>
         
       </div>
-      
-      
+
       <!-- gallery section -->
       <div class="container">
         <div class="gallery-grid">
       
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+      
+      // get thumnail if available, if not use default thumbnail:
         if (has_post_thumbnail()):
           $thumb = get_the_post_thumbnail_url($post, 'full');
         else :
-          $thumb = 'http://www.256klabs.com/wpdev/wp-content/uploads/2017/04/bk2.jpg';
+          $thumb = 'http://fillmurray.com/400/500';
         endif;
         
-         $postcatobj = get_the_category();
-  $postcat = "";
-  foreach($postcatobj as $value) {
-    $postcat .= $value->cat_name . " ";
+        // get post category(ies) and add them as classes to each post box:
+        $postcatobj = get_the_category();
+        $postcat = "";
+        foreach($postcatobj as $value) {
+        $postcat .= $value->cat_name . " ";
+    
+        // get the single post permalink:
+        $postlink = get_permalink();
   }
         ?>
-        <div class="gallery-grid-box <?php echo $postcat ?> ">
-          <div class="image" style="background-image: url('<?php echo $thumb ?>')">
-            
-          </div>
-        </div>
+      
+        <a href="<?php echo $postlink ?>" class="gallery-grid-box <?php echo $postcat ?> ">
+          <div class="image" style="background-image: url('<?php echo $thumb ?>')"></div>
+        </a>
+  
         
       <?php endwhile; ?>
         <!-- post navigation -->

@@ -274,7 +274,7 @@ body {
   border-top: 1px solid #ddd;
   position: absolute;
   background: white;
-  z-index: 2; }
+  z-index: 100; }
 
 .js-fixedPos {
   position: fixed;
@@ -304,6 +304,7 @@ body {
     text-transform: uppercase; }
 
 .gallery-grid {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,7 +317,9 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin-top: 200px; }
+  margin-top: 200px;
+  z-index: -1;
+  overflow-x: hidden; }
 
 .gallery-grid-box {
   height: 250px;
@@ -325,7 +328,8 @@ body {
   margin: 10px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  transition: 200ms ease; }
 
 .gallery-grid-box:nth-child(5n+0) {
   width: 50%; }
@@ -334,3 +338,6 @@ body {
   background: no-repeat center cover;
   height: 100%;
   width: 100%; }
+
+.hide-box {
+  height: 0; }

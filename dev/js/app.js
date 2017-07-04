@@ -22,25 +22,36 @@ $(window).on('scroll', function(navbarPosition){
  
 });
 
-
+function endAnimation(){
+  console.log("animation finished");
+}
 
 // fliter section
-var slideSpeed = 200;
+var slideSpeed = 500;
 var $menuItemLink = $(".menu-item a");
 var $galleryGrid = $(".gallery-grid");
 
 $menuItemLink.on('click', function(e){
   e.preventDefault();
-  $galleryGrid.children().slideUp(slideSpeed);
   var $filterKey = $(this).text().toLowerCase();
-  if ($filterKey == "all"){
-    console.log($filterKey);
-    $galleryGrid.children().slideUp(slideSpeed);
-    $galleryGrid.children().slideDown(slideSpeed);
-  }else {
-    console.log($filterKey);
-    $galleryGrid.find("."+$filterKey).slideDown(slideSpeed);
-  }
+  console.log($filterKey);
+  
+  
+  //
+  $galleryGrid.slideUp(slideSpeed, function(){
+    $galleryGrid.children().hide()
+    if ($filterKey == "all"){
+    
+          $galleryGrid.children().fadeIn(slideSpeed);
+    }else {
+      $galleryGrid.find("."+$filterKey).fadeIn(slideSpeed);
+    }
+  }).slideDown(slideSpeed);
+    
+  
+  
 });
+
+
 
 });
